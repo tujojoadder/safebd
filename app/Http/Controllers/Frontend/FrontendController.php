@@ -14,6 +14,8 @@ use App\Models\Brand;
 use App\Models\Product;
 use App\Models\MultiImg;
 use App\Models\Pages;
+use App\Models\Setting;
+use App\Models\Member;
 use App\Models\Subscribe;
 use Illuminate\Support\Carbon;
 use Session;
@@ -23,9 +25,14 @@ class FrontendController extends Controller
     /* safe bd */
     public function safeBD()
     {
-        return view('safebd.fontend.home');
+        $settings = Setting::pluck('value', 'name');
+        $members=Member::all();
+        
+        return view('safebd.fontend.home',compact('settings','members'));
     }
 
+    
+    
     /*=================== Start Index Methoed ===================*/
     public function index(Request $request)
     {

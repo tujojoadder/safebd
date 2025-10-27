@@ -3,15 +3,14 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
-                <div class="logo-wrapper">
-                    <div class="logo-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <div class="org-info">
-                        <h1>সেফ বাংলাদেশ ফাউন্ডেশন</h1>
-                        <p>মানবতার সেবায় নিয়োজিত একটি স্বেচ্ছাসেবী প্রতিষ্ঠান</p>
-                    </div>
+                {{-- logo --}}
+                <div class="logo-wrapper" style="height: 60px;">
+                    <a href="{{ url('/') }}" style="display: inline-block;">
+                        <img src="{{ asset($settings['site_logo']) }}" alt="Safe Bangladesh Foundation"
+                            style="max-height: 60px; width: auto; cursor: pointer;">
+                    </a>
                 </div>
+
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="header-actions">
@@ -44,18 +43,19 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg main-nav">
     <div class="container">
-        <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="background: white">
+        <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            style="background: white">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="#">
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('safeBd') }}">
                         <i class="fas fa-home"></i> হোম
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('register') ? 'active' : '' }}" href="#">
+                    <a class="nav-link {{ Request::is('register') ? 'active' : '' }}" href="{{ route('safeBd.create') }}">
                         <i class="fas fa-users"></i> সদস্য নিবন্ধন
                     </a>
                 </li>

@@ -38,6 +38,8 @@ use App\Http\Controllers\backend\CountryDataController;
 use App\Http\Controllers\backend\RoleController;
 use App\Http\Controllers\backend\StaffController;
 use App\Http\Controllers\backend\PosController;
+use App\Http\Controllers\SafeBD\SelfBDUserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +54,13 @@ use App\Http\Controllers\backend\PosController;
 
 
 /* safebd */
+
 Route::get('/', [FrontendController::class, 'safeBD'])->name('safeBd');
+
+Route::get('/register', [SelfBDUserController::class, 'create'])->name('safeBd.create');
+Route::post('/safebd/register', [SelfBDUserController::class, 'store'])->name('safeBd.store');
+Route::get('/safebd/get-districts/{divisionId}', [SelfBDUserController::class, 'getDistricts'])->name('safeBd.getDistricts');
+Route::get('/safebd/get-upazilas/{districtId}', [SelfBDUserController::class, 'getUpazilas'])->name('safeBd.getUpazilas');
 
 /*================== Start Frontend All Route ==============*/
 

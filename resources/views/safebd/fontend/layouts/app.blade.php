@@ -26,7 +26,7 @@
         }
 
         body {
-            font-family: "Hind Siliguri", sans-serif;
+          
             color: var(--dark);
             overflow-x: hidden;
             background: var(--light);
@@ -41,11 +41,7 @@
             border-bottom: 1px solid rgba(16, 185, 129, 0.1);
         }
 
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+        
 
         .logo-icon {
             width: 70px;
