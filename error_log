@@ -1,0 +1,31 @@
+[22-Mar-2023 11:33:38 UTC] PHP Warning:  require(/home/su958ecost/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/su958ecost/public_html/index.php on line 34
+[22-Mar-2023 11:33:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/su958ecost/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/su958ecost/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/su958ecost/public_html/index.php on line 34
+[22-Mar-2023 11:33:47 UTC] PHP Warning:  require(/home/su958ecost/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/su958ecost/public_html/index.php on line 34
+[22-Mar-2023 11:33:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/su958ecost/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/su958ecost/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/su958ecost/public_html/index.php on line 34
+[22-Mar-2023 11:34:00 UTC] PHP Warning:  require(/home/su958ecost/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/su958ecost/public_html/index.php on line 34
+[22-Mar-2023 11:34:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/su958ecost/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/su958ecost/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/su958ecost/public_html/index.php on line 34
+[22-Mar-2023 11:34:01 UTC] PHP Warning:  require(/home/su958ecost/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/su958ecost/public_html/index.php on line 34
+[22-Mar-2023 11:34:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/su958ecost/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/su958ecost/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/su958ecost/public_html/index.php on line 34
+[17-May-2023 07:54:32 UTC] PHP Fatal error:  Cannot use [] for reading in /home/su958ecost/public_html/app/Http/Controllers/userpanel/TeamController.php on line 33
+[17-May-2023 07:54:50 UTC] PHP Fatal error:  Cannot use [] for reading in /home/su958ecost/public_html/app/Http/Controllers/userpanel/TeamController.php on line 33
+[17-May-2023 10:57:03 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:57:57 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:58:08 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:58:11 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:58:13 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:58:14 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:58:15 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:58:16 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24
+[17-May-2023 10:58:20 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/eg8549jus/public_html/vendor/composer/platform_check.php on line 24

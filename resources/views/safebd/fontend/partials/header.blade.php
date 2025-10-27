@@ -1,0 +1,90 @@
+<!-- Top Header -->
+<header class="top-header d-none d-lg-block">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="logo-wrapper">
+                    <div class="logo-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="org-info">
+                        <h1>সেফ বাংলাদেশ ফাউন্ডেশন</h1>
+                        <p>মানবতার সেবায় নিয়োজিত একটি স্বেচ্ছাসেবী প্রতিষ্ঠান</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="header-actions">
+                    <div class="social-links d-none d-lg-flex">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <div class="reg-badge">
+                        <i class="fas fa-certificate"></i> এস-১২১২৯/২০১৫
+                    </div>
+                    <button class="btn-register">
+                        <i class="fas fa-user-plus"></i> সদস্য নিবন্ধন
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg main-nav">
+    <div class="container">
+        <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="background: white">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="#">
+                        <i class="fas fa-home"></i> হোম
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('register') ? 'active' : '' }}" href="#">
+                        <i class="fas fa-users"></i> সদস্য নিবন্ধন
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('objectives') ? 'active' : '' }}" href="#">
+                        <i class="fas fa-bullseye"></i> উদ্দেশ্য ও লক্ষ্য
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('blood-donation') ? 'active' : '' }}" href="#">
+                        <i class="fas fa-tint"></i> রক্তদান
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('donation') ? 'active' : '' }}" href="#">
+                        <i class="fas fa-donate"></i> দান-অনুদান
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('gallery') ? 'active' : '' }}" href="#">
+                        <i class="fas fa-images"></i> ছবি
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="#">
+                        <i class="fas fa-phone"></i> যোগাযোগ
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
