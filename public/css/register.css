@@ -1,0 +1,198 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .register-page {
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: 'SolaimanLipi', 'Kalpurush', 'Nikosh', sans-serif;
+        }
+
+        .register-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .register-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Header */
+        .register-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .icon-circle svg {
+            color: white;
+        }
+
+        .page-title {
+            font-size: 36px;
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        /* Form */
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #374151;
+            font-size: 15px;
+        }
+
+        .form-group label svg {
+            color: #10b981;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 14px 18px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #10b981;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: #9ca3af;
+        }
+
+        .error-text {
+            color: #ef4444;
+            font-size: 13px;
+            margin-top: -5px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Login Link */
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link p {
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+        .login-link a {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .register-card {
+                padding: 30px 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .page-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .register-page {
+                padding: 20px 15px;
+            }
+
+            .register-card {
+                padding: 25px 20px;
+            }
+
+            .icon-circle {
+                width: 80px;
+                height: 80px;
+            }
+
+            .icon-circle svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
