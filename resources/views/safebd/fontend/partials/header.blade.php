@@ -47,6 +47,12 @@
             style="background: white">
             <span class="navbar-toggler-icon"></span>
         </button>
+        {{-- Mobile Logo --}}
+        <div class="mobile-logo d-lg-none bg-light p-1 px-2">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset($settings['site_logo']) }}" style="max-height: 40px; width: auto; cursor: pointer;" alt="Safe Bangladesh Foundation">
+            </a>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
