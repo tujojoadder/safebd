@@ -40,9 +40,8 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=800&q=80" 
-                         alt="Blood Donation" 
-                         class="img-fluid">
+                    <img src="{{ asset('frontend/safebd/normal/head.jpg') }}" alt="Blood Donation"
+                        class="img-fluid">
                 </div>
             </div>
         </div>
@@ -53,7 +52,7 @@
 
 
 
-    
+
     <!-- Blood Bank Section -->
     <section class="blood-section">
         <div class="container">
@@ -278,9 +277,9 @@
                 <p class="text-muted">আমাদের কার্যক্রমের ছবি</p>
             </div>
             <div class="gallery-grid">
-                @foreach (['https://images.unsplash.com/photo-1615461065929-4f8ffed6c0af?w=600&q=80', 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80', 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600&q=80', 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=600&q=80', 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=600&q=80', 'https://images.unsplash.com/photo-1516841273335-e39b37888115?w=600&q=80'] as $index => $image)
+                @foreach (['frontend/safebd/normal/16.jpg', 'frontend/safebd/normal/48.jpg', 'frontend/safebd/normal/22.jpg', 'frontend/safebd/normal/5.jpg', 'frontend/safebd/normal/1.jpg', 'frontend/safebd/normal/8.jpg', 'frontend/safebd/normal/18.jpg'] as $index => $image)
                     <div class="gallery-item">
-                        <img src="{{ $image }}" alt="Gallery Image {{ $index + 1 }}" class="gallery-img" />
+                        <img src="{{ asset($image) }}" alt="Gallery Image {{ $index + 1 }}" class="gallery-img" />
                     </div>
                 @endforeach
             </div>
