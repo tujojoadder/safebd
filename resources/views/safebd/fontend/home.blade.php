@@ -124,30 +124,33 @@
             <div class="row g-4">
                 <div class="col-lg-6">
                     <div class="info-card">
-                        <img src="https://images.unsplash.com/photo-1615461066159-fea0960485d5?w=800&q=80"
+                        <img src="{{ asset('frontend/safebd/normal/1.jpeg') }}"
                             alt="Blood Donation" class="info-image" />
                         <h3 class="info-title">
                             <i class="fas fa-info-circle"></i>ই-ব্লাড ব্যাংক সম্পর্কে
                         </h3>
                         <p class="info-text">
-                            সেফ বাংলাদেশ ফাউন্ডেশন একটি অরাজনৈতিক, অলাভজনক স্বেচ্ছাসেবী প্রতিষ্ঠান। রক্তদান মাধ্যমে মানুষের
-                            পাশে দাঁড়ানো এবং জীবন বাঁচানোই আমাদের মূল লক্ষ্য। আমরা বিশ্বাস করি, একটি রক্তদান একটি জীবন
-                            বাঁচাতে পারে। আমাদের এই ডিজিটাল প্ল্যাটফর্মের মাধ্যমে রক্তদাতা এবং রক্তগ্রহীতাদের মধ্যে সহজ
-                            যোগাযোগ স্থাপন করা সম্ভব হচ্ছে।
+                            রক্তদান সেবা সমসাময়িক চিকিৎসা ও স্বাস্থ্য পরিচর্যার একটি অপরিহার্য অংশ। ব্লাড ম্যানেজমেন্ট একটি
+                            চ্যালেঞ্জিং কাজ হিসাবে স্বীকৃত হয়েছে এবং এটি জীবনকেও বাঁচায়। তথ্য ও কম্পিউটার প্রযুক্তির
+                            উন্নয়নের মাধ্যমে এ ধরনের বড় চ্যালেঞ্জ যথেষ্ট উপশম হয়েছে। ই-ব্লাড ব্যাঙ্ক হল একটি সমন্বিত
+                            ব্লাড ব্যাঙ্ক অটোমেশন সিস্টেম। এই ওয়েব ভিত্তিক মেকানিজম দেশের সকল রক্তদাতাকে একক নেটওয়ার্কে
+                            সংযুক্ত করতে সক্ষম। এই ই-ব্লাড ব্যাংকের ডাটাবেজটি জনসাধারণকে আঙুলের ডগায় রক্তের প্রাপ্যতার
+                            অবস্থা সহজে অ্যাক্সেস করতে সাহায্য করবে; যাতে তিনি একটি নির্দিষ্ট ব্লাড গ্রুপের জন্য নিকটবর্তী
+                            ব্লাড ডোনারকে খুঁজে পেতে সাহায্য করবে এবং একটি মূল্যবান জীবন বাঁচাতে ভুমিকা রাখতে পারেন।
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="info-card">
-                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&q=80"
+                        <img src="{{ asset('frontend/safebd/normal/2.jpeg') }}"
                             alt="Registration" class="info-image" />
                         <h3 class="info-title">
                             <i class="fas fa-user-plus"></i>ডোনার রেজিস্ট্রেশন
                         </h3>
                         <p class="info-text">
-                            রক্তদান করে আপনিও হতে পারেন একজন জীবনদাতা। আমাদের সাথে নিবন্ধন করুন এবং প্রয়োজনের সময়
-                            রক্তদানের মাধ্যমে অসহায় মানুষের পাশে দাঁড়ান। রেজিস্ট্রেশন প্রক্রিয়া অত্যন্ত সহজ এবং আপনার
-                            তথ্য সম্পূর্ণ নিরাপদ থাকবে। প্রতিটি রক্তদান একটি মহৎ কাজ এবং আপনি হতে পারেন কারো জীবন রক্ষাকারী।
+                            রক্ত দিন জীবন বাঁচান। এই স্লোগানকে সামনে রেখে আপনিও এখানে রেজিষ্ট্রেশনের মাধ্যমে আমাদের ই-ব্লাড
+                            ব্যাংক এর ডাটাবেজে নিজের তথ্য রাখতে পারবেন। আপনার এক ব্যাগ রক্তদান একজন মানুষের জীবনে বিশেষ
+                            ভুমিকা রাখতে পারে। বিনিময়ে আপনি পেতে পারেন একটি পরিবারের মুখে হাসি ফোটাবার অনাবিল আনন্দ।
                         </p>
                         <div class="mt-4 p-4 bg-light rounded-4">
                             <h5 class="text-center mb-0" style="color: var(--primary-green)">
@@ -168,76 +171,90 @@
                 <p class="text-muted">যারা সংগঠনকে নেতৃত্ব দিচ্ছেন</p>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="profile-card">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Leader"
-                            class="profile-img" />
-                        <h3 class="profile-name">আঃ মাসুদ করিম</h3>
-                        <p class="profile-role">চেয়ারম্যান</p>
-                        <p class="text-muted mb-3">সেফ বাংলাদেশ ফাউন্ডেশন</p>
-                        <button class="btn-more">
-                            <i class="fas fa-arrow-right me-2"></i>বিস্তারিত দেখুন
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="info-card">
-                        <h3 class="info-title">
-                            <i class="fas fa-bullseye"></i>উদ্দেশ্য ও লক্ষ্য
-                        </h3>
-                        <p class="info-text">
-                            সেফ বাংলাদেশ ফাউন্ডেশন একটি অরাজনৈতিক, অলাভজনক স্বেচ্ছাসেবী বেসরকারী সংস্থা। দেশীয় ও
-                            আন্তর্জাতিক বিধিবিধান ও আইনের শর্তাদি মেনে প্রয়োজনীয় সমস্ত কাজ প্রস্তাব, পরিকল্পনা, অধ্যয়ন ও
-                            গৃহীত সিদ্ধান্ত বাস্তবায়ন ও মূল্যায়নের মাধ্যমে এ ধরণের সব ধরনের কার্যাবলী সম্পাদন করতে পারবে।
-                        </p>
-                        <div class="row mt-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <div class="me-3" style="color: var(--primary-green); font-size: 1.5rem">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                    <div>
-                                        <h5>মানবসেবা</h5>
-                                        <p class="text-muted mb-0">অসহায় মানুষের পাশে দাঁড়ানো</p>
-                                    </div>
-                                </div>
+               <!-- Leader 1 -->
+        <!-- Leader 1 -->
+<div class="col-lg-3 col-md-6">
+    <div class="info-card text-center">
+        <img src="{{ asset('frontend/safebd/leaders/chirmen.jpg') }}"
+            class="card-img-top rounded-circle border border-3 border-primary mx-auto mt-3"
+            alt="Leader"
+            style="width: 120px; height: 120px; object-fit: cover;">
+        <div class="card-body mt-3">
+            <h5 class="card-title fw-bold mb-1">অ্যাড: মাসুদ করিম</h5>
+            <p class="text-primary mb-1">চেয়ারম্যান</p>
+            <p class="text-muted small">সেফ বাংলাদেশ ফাউন্ডেশন</p>
+            <button class="btn-more">
+                <i class="fas fa-arrow-right me-2"></i>বিস্তারিত দেখুন
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Leader 2 -->
+<div class="col-lg-3 col-md-6">
+    <div class="info-card text-center">
+        <img src="{{ asset('frontend/safebd/leaders/1984.jpg') }}"
+            class="card-img-top rounded-circle border border-3 border-primary mx-auto mt-3"
+            alt="Leader"
+            style="width: 120px; height: 120px; object-fit: cover;">
+        <div class="card-body mt-3">
+            <h5 class="card-title fw-bold mb-1">মো : ফিরোজ হোসেন (সফ্টওয়্যার ইঞ্জিনিয়ার)</h5>
+            <p class="text-primary mb-1">সহ-সচিব</p>
+            <p class="text-muted small">সেফ বাংলাদেশ ফাউন্ডেশন</p>
+            <button class="btn-more">
+                <i class="fas fa-arrow-right me-2"></i>বিস্তারিত দেখুন
+            </button>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Mission & Vision -->
+        <div class="col-lg-6">
+            <div class="info-card  ">
+                <div class="card-body">
+                    <h4 class="fw-bold text-primary mb-3">
+                        <i class="fas fa-bullseye me-2"></i>লক্ষ্য ও উদ্দেশ্যে
+                    </h4>
+                    <p class="text-muted">
+                        সেফ বাংলাদেশ ফাউন্ডেশন একটি অরাজনৈতিক, অলাভজনক স্বেচ্ছাসেবী বেসরকারী সংস্থা। দেশীয় ও আন্তর্জাতিক
+                        বিধিবিধান ও আইনের শর্তাদি মেনে প্রয়োজনীয় সমস্ত কাজ প্রস্তাব, পরিকল্পনা, অধ্যয়ন ও গৃহীত সিদ্ধান্ত
+                        বাস্তবায়ন ও মূল্যায়নের মাধ্যমে এ ধরণের সব ধরনের কার্যাবলী সম্পাদন করতে পারবে।
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3 d-flex">
+                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">মানবসেবা</h6>
+                                <p class="text-muted small mb-0">অসহায় মানুষের পাশে দাঁড়ানো</p>
                             </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <div class="me-3" style="color: var(--primary-green); font-size: 1.5rem">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                    <div>
-                                        <h5>রক্তদান সেবা</h5>
-                                        <p class="text-muted mb-0">সহজে রক্তদাতা খুঁজে পাওয়া</p>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex">
+                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">রক্তদান সেবা</h6>
+                                <p class="text-muted small mb-0">সহজে রক্তদাতা খুঁজে পাওয়া</p>
                             </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <div class="me-3" style="color: var(--primary-green); font-size: 1.5rem">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                    <div>
-                                        <h5>সচেতনতা বৃদ্ধি</h5>
-                                        <p class="text-muted mb-0">রক্তদান সম্পর্কে জনসচেতনতা</p>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex">
+                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">সচেতনতা বৃদ্ধি</h6>
+                                <p class="text-muted small mb-0">রক্তদান সম্পর্কে জনসচেতনতা</p>
                             </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <div class="me-3" style="color: var(--primary-green); font-size: 1.5rem">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                    <div>
-                                        <h5>ডিজিটাল সেবা</h5>
-                                        <p class="text-muted mb-0">অনলাইন রক্ত ব্যাংক ব্যবস্থা</p>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex">
+                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">ডিজিটাল সেবা</h6>
+                                <p class="text-muted small mb-0">অনলাইন রক্ত ব্যাংক ব্যবস্থা</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     </section>
