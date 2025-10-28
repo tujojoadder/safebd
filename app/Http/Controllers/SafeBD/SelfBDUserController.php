@@ -69,4 +69,33 @@ class SelfBDUserController extends Controller
 
         return redirect()->back();
     }
+
+    public function searchBlood(Request $request)
+{
+    $settings = Setting::pluck('value', 'name');
+    $bloodId = $request->query('blood');
+
+    // Blood group mapping
+    $bloodGroups = [
+        1 => 'A+',
+        2 => 'A-',
+        3 => 'AB+',
+        4 => 'AB-',
+        5 => 'B+',
+        6 => 'B-',
+        7 => 'O+',
+        8 => 'O-'
+    ];
+
+    // Get filtered members WITH relationships
+    $members = Member::with(['division', 'district', 'upazila'])
+                     ->where('blood', $bloodId)
+                     ->get();
+
+    $bloodGroup = $bloodGroups[$bloodId] ?? 'Unknown';
+
+    return view('safebd.fontend.search-blood', compact('members', 'bloodGroup', 'bloodId','settings'));
+}
+
+    
 }

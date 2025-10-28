@@ -62,6 +62,8 @@ Route::post('/safebd/register', [SelfBDUserController::class, 'store'])->name('s
 Route::get('/safebd/get-districts/{divisionId}', [SelfBDUserController::class, 'getDistricts'])->name('safeBd.getDistricts');
 Route::get('/safebd/get-upazilas/{districtId}', [SelfBDUserController::class, 'getUpazilas'])->name('safeBd.getUpazilas');
 
+Route::get('/SearchBlood', [SelfBDUserController::class, 'searchBlood'])->name('search.blood');
+
 /*================== Start Frontend All Route ==============*/
 
 Route::get('/home', [FrontendController::class, 'index'])->name('home');

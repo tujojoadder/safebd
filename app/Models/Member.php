@@ -25,4 +25,20 @@ class Member extends Model
         'thana',
         'union',
     ];
+
+    // Relations
+    public function division()
+    {
+        return $this->belongsTo(Division::class, 'division_id');
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class, 'district_id');
+    }
+
+    public function upazila()
+    {
+        return $this->belongsTo(Upazila::class, 'upazila_id');
+    }
 }

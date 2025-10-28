@@ -3,7 +3,7 @@
 @section('title', 'হোম - সেফ বাংলাদেশ ফাউন্ডেশন')
 
 @push('styles')
- <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endpush
 
 @section('content')
@@ -50,13 +50,15 @@
             </div>
 
             <div class="blood-grid">
-                @foreach ([['group' => 'A+', 'count' => $members->where('blood', 1)->count() ?? 0], ['group' => 'A-', 'count' => $members->where('blood', 2)->count() ?? 0], ['group' => 'AB+', 'count' => $members->where('blood', 3)->count() ?? 0], ['group' => 'AB-', 'count' => $members->where('blood', 4)->count() ?? 0], ['group' => 'B+', 'count' => $members->where('blood', 5)->count() ?? 0], ['group' => 'B-', 'count' => $members->where('blood', 6)->count() ?? 0], ['group' => 'O+', 'count' => $members->where('blood', 7)->count() ?? 0], ['group' => 'O-', 'count' => $members->where('blood', 8)->count() ?? 0]] as $blood)
-                    <div class="blood-card">
-                        <i class="fas fa-tint blood-drop"></i>
-                        <div class="blood-group">{{ $blood['group'] }}</div>
-                        <div class="blood-count">{{ $blood['count'] }}</div>
-                        <div class="count-label">দাতা উপলব্ধ</div>
-                    </div>
+                @foreach ([['id' => 1, 'group' => 'A+', 'count' => $members->where('blood', 1)->count() ?? 0], ['id' => 2, 'group' => 'A-', 'count' => $members->where('blood', 2)->count() ?? 0], ['id' => 3, 'group' => 'AB+', 'count' => $members->where('blood', 3)->count() ?? 0], ['id' => 4, 'group' => 'AB-', 'count' => $members->where('blood', 4)->count() ?? 0], ['id' => 5, 'group' => 'B+', 'count' => $members->where('blood', 5)->count() ?? 0], ['id' => 6, 'group' => 'B-', 'count' => $members->where('blood', 6)->count() ?? 0], ['id' => 7, 'group' => 'O+', 'count' => $members->where('blood', 7)->count() ?? 0], ['id' => 8, 'group' => 'O-', 'count' => $members->where('blood', 8)->count() ?? 0]] as $blood)
+                    <a href="{{ url('/SearchBlood?blood=' . $blood['id']) }}" class="blood-card-link">
+                        <div class="blood-card">
+                            <i class="fas fa-tint blood-drop"></i>
+                            <div class="blood-group">{{ $blood['group'] }}</div>
+                            <div class="blood-count">{{ $blood['count'] }}</div>
+                            <div class="count-label">দাতা উপলব্ধ</div>
+                        </div>
+                    </a>
                 @endforeach
             </div>
 
@@ -268,5 +270,5 @@
 @endsection
 
 @push('scripts')
-  <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
 @endpush

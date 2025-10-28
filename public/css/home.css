@@ -108,6 +108,12 @@
             background: linear-gradient(90deg, var(--accent-orange), var(--primary-green));
             border-radius: 2px;
         }
+        .blood-card-link {
+    display: block;           /* allow divs inside */
+    text-decoration: none;    /* remove underline */
+    color: inherit;           /* keep normal text color */
+}
+
 
         .blood-grid {
             display: grid;
