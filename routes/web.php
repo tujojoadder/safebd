@@ -63,6 +63,8 @@ Route::get('/safebd/get-districts/{divisionId}', [SelfBDUserController::class, '
 Route::get('/safebd/get-upazilas/{districtId}', [SelfBDUserController::class, 'getUpazilas'])->name('safeBd.getUpazilas');
 
 Route::get('/SearchBlood', [SelfBDUserController::class, 'searchBlood'])->name('search.blood');
+Route::get('/filterblood', [SelfBDUserController::class, 'searchResults'])->name('blood.filter.results');
+
 
 /*================== Start Frontend All Route ==============*/
 

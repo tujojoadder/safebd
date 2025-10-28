@@ -11,6 +11,7 @@ use App\Models\Subsubcategory;
 use App\Models\Blog;
 use App\Models\Banner;
 use App\Models\Brand;
+use App\Models\Division;
 use App\Models\Product;
 use App\Models\MultiImg;
 use App\Models\Pages;
@@ -27,8 +28,9 @@ class FrontendController extends Controller
     {
         $settings = Setting::pluck('value', 'name');
         $members=Member::all();
+         $divisions = Division::all();
         
-        return view('safebd.fontend.home',compact('settings','members'));
+        return view('safebd.fontend.home',compact('settings','members','divisions'));
     }
 
     

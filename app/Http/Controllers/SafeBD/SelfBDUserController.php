@@ -97,5 +97,45 @@ class SelfBDUserController extends Controller
     return view('safebd.fontend.search-blood', compact('members', 'bloodGroup', 'bloodId','settings'));
 }
 
+   // Search results page with filters
+    public function searchResults(Request $request)
+    {
+        $settings = Setting::pluck('value', 'name');
+        $bloodId = $request->query('blood');
+        $divisionId = $request->query('division_id');
+        $districtId = $request->query('district_id');
+        $upazilaId = $request->query('upazila_id');
+        
+        // Blood group mapping
+        $bloodGroups = [
+            1 => 'A+', 2 => 'A-', 3 => 'AB+', 4 => 'AB-',
+            5 => 'B+', 6 => 'B-', 7 => 'O+', 8 => 'O-'
+        ];
+        
+        // Build query
+        $query = Member::query();
+        
+        if ($bloodId) {
+            $query->where('blood', $bloodId);
+        }
+        
+        if ($divisionId) {
+            $query->where('division_id', $divisionId);
+        }
+        
+        if ($districtId) {
+            $query->where('district_id', $districtId);
+        }
+        
+        if ($upazilaId) {
+            $query->where('upazila_id', $upazilaId);
+        }
+        
+        $members = $query->get();
+        $bloodGroup = $bloodGroups[$bloodId] ?? 'সকল';
+        
+        return view('safebd.fontend.filter-results', compact('members', 'bloodGroup','settings'));
+    }
+
     
 }

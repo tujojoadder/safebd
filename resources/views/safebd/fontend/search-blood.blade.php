@@ -38,11 +38,7 @@
                                         <td class="fw-bold text-primary text-center">{{ $index + 1 }}</td>
                                         <td class="fw-bold">{{ $member->fullname }}</td>
                                         <td class="text-center"><span class="badge bg-danger rounded-pill">{{ $bloodGroup }}</span></td>
-                                        <td>
-                                            <a href="tel:{{ $member->mobile }}" class="text-success text-decoration-none">
-                                               {{ $member->phone }}
-                                            </a>
-                                        </td>
+                                        <td>{{ $member->phone ?? '' }}</td>
                                         <td>{{ $member->division->name_bn ?? '' }}</td>
                                         <td>{{ $member->district->name_bn ?? '' }}</td>
                                         <td>{{ $member->upazila->name_bn ?? '' }}</td>

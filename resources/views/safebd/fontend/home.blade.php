@@ -67,53 +67,41 @@
                 <h3 class="search-title">
                     <i class="fas fa-search"></i>রক্তের সন্ধান করুন
                 </h3>
-                <form action="" method="POST">
-                    @csrf
+                <form action="{{ route('blood.filter.results') }}" method="GET">
                     <div class="row g-4">
                         <div class="col-md-3">
                             <label class="form-label">রক্তের গ্রুপ</label>
-                            <select name="blood_group" class="form-select" required>
+                            <select name="blood" id="blood" class="form-select" required>
                                 <option value="">নির্বাচন করুন</option>
-                                <option value="A+">A+</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
-                                <option value="B-">B-</option>
-                                <option value="AB+">AB+</option>
-                                <option value="AB-">AB-</option>
-                                <option value="O+">O+</option>
-                                <option value="O-">O-</option>
+                                <option value="1">A+</option>
+                                <option value="2">A-</option>
+                                <option value="3">AB+</option>
+                                <option value="4">AB-</option>
+                                <option value="5">B+</option>
+                                <option value="6">B-</option>
+                                <option value="7">O+</option>
+                                <option value="8">O-</option>
                             </select>
                         </div>
                         <div class="col-md-3">
                             <label class="form-label">বিভাগ</label>
-                            <select name="division" class="form-select" required>
+                            <select name="division_id" id="division_id" class="form-select">
                                 <option value="">বিভাগ নির্বাচন করুন</option>
-                                <option value="ঢাকা">ঢাকা</option>
-                                <option value="চট্টগ্রাম">চট্টগ্রাম</option>
-                                <option value="রাজশাহী">রাজশাহী</option>
-                                <option value="খুলনা">খুলনা</option>
-                                <option value="সিলেট">সিলেট</option>
-                                <option value="বরিশাল">বরিশাল</option>
-                                <option value="রংপুর">রংপুর</option>
-                                <option value="ময়মনসিংহ">ময়মনসিংহ</option>
+                                @foreach ($divisions as $division)
+                                    <option value="{{ $division->id }}">{{ $division->name_bn }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="col-md-3">
                             <label class="form-label">জেলা</label>
-                            <select name="district" class="form-select" required>
-                                <option value="">জেলা নির্বাচন করুন</option>
-                                <option value="কিশোরগঞ্জ">কিশোরগঞ্জ</option>
-                                <option value="নরসিংদী">নরসিংদী</option>
-                                <option value="গাজীপুর">গাজীপুর</option>
+                            <select name="district_id" id="district_id" class="form-select">
+                                <option value="">প্রথমে বিভাগ নির্বাচন করুন</option>
                             </select>
                         </div>
                         <div class="col-md-3">
                             <label class="form-label">থানা/উপজেলা</label>
-                            <select name="thana" class="form-select">
-                                <option value="">থানা নির্বাচন করুন</option>
-                                <option value="ভৈরব">ভৈরব</option>
-                                <option value="কুলিয়ারচর">কুলিয়ারচর</option>
-                                <option value="হোসেনপুর">হোসেনপুর</option>
+                            <select name="upazila_id" id="upazila_id" class="form-select">
+                                <option value="">প্রথমে জেলা নির্বাচন করুন</option>
                             </select>
                         </div>
                         <div class="col-12 text-center mt-4">
