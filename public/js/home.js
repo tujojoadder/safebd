@@ -25,8 +25,9 @@
 
 
 
+
+    $(function() {
         
-        $(function() {
     // AJAX - Load Districts when Division is selected
     $('#division_id').on('change', function() {
         const divisionId = $(this).val();

@@ -49,7 +49,7 @@ class SelfBDUserController extends Controller
 
 
         // Convert dateOfBirth to Unix timestamp for j_date
-        $validated['j_date'] = strtotime($validated['dateOfBirth']);
+        $validated['j_date'] = time();
 
         // Store in Member table
         Member::create([
@@ -71,71 +71,74 @@ class SelfBDUserController extends Controller
     }
 
     public function searchBlood(Request $request)
-{
-    $settings = Setting::pluck('value', 'name');
-    $bloodId = $request->query('blood');
+    {
+        $settings = Setting::pluck('value', 'name');
+        $bloodId = $request->query('blood');
 
-    // Blood group mapping
-    $bloodGroups = [
-        1 => 'A+',
-        2 => 'A-',
-        3 => 'AB+',
-        4 => 'AB-',
-        5 => 'B+',
-        6 => 'B-',
-        7 => 'O+',
-        8 => 'O-'
-    ];
+        // Blood group mapping
+        $bloodGroups = [
+            1 => 'A+',
+            2 => 'A-',
+            3 => 'AB+',
+            4 => 'AB-',
+            5 => 'B+',
+            6 => 'B-',
+            7 => 'O+',
+            8 => 'O-'
+        ];
 
-    // Get filtered members WITH relationships
-    $members = Member::with(['division', 'district', 'upazila'])
-                     ->where('blood', $bloodId)
-                     ->get();
+        // Get filtered members WITH relationships
+        $members = Member::with(['division', 'district', 'upazila'])
+            ->where('blood', $bloodId)
+            ->get();
 
-    $bloodGroup = $bloodGroups[$bloodId] ?? 'Unknown';
+        $bloodGroup = $bloodGroups[$bloodId] ?? 'Unknown';
 
-    return view('safebd.fontend.search-blood', compact('members', 'bloodGroup', 'bloodId','settings'));
-}
+        return view('safebd.fontend.search-blood', compact('members', 'bloodGroup', 'bloodId', 'settings'));
+    }
 
-   // Search results page with filters
-    public function searchResults(Request $request)
+    // Search results page with filters
+    public function filterBlood(Request $request)
     {
         $settings = Setting::pluck('value', 'name');
         $bloodId = $request->query('blood');
         $divisionId = $request->query('division_id');
         $districtId = $request->query('district_id');
         $upazilaId = $request->query('upazila_id');
-        
-        // Blood group mapping
+
         $bloodGroups = [
-            1 => 'A+', 2 => 'A-', 3 => 'AB+', 4 => 'AB-',
-            5 => 'B+', 6 => 'B-', 7 => 'O+', 8 => 'O-'
+            1 => 'A+',
+            2 => 'A-',
+            3 => 'AB+',
+            4 => 'AB-',
+            5 => 'B+',
+            6 => 'B-',
+            7 => 'O+',
+            8 => 'O-'
         ];
-        
+
         // Build query
         $query = Member::query();
-        
+
         if ($bloodId) {
             $query->where('blood', $bloodId);
         }
-        
+
         if ($divisionId) {
             $query->where('division_id', $divisionId);
         }
-        
+
         if ($districtId) {
             $query->where('district_id', $districtId);
         }
-        
+
         if ($upazilaId) {
             $query->where('upazila_id', $upazilaId);
         }
-        
+
         $members = $query->get();
         $bloodGroup = $bloodGroups[$bloodId] ?? 'সকল';
-        
-        return view('safebd.fontend.filter-results', compact('members', 'bloodGroup','settings'));
-    }
 
-    
+        return view('safebd.fontend.filter-results', compact('members', 'bloodGroup', 'settings'));
+    }
 }

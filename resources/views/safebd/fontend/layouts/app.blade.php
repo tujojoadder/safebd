@@ -18,6 +18,16 @@
             --light: #f9fafb;
             --blood-red: #ef4444;
         }
+         @font-face {
+            font-family: 'SolaimanLipi';
+            src: url('{{ asset('fonts/SolaimanLipi.ttf') }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, span, div, a {
+            font-family: 'SolaimanLipi', sans-serif;
+        }
 
         * {
             margin: 0;
