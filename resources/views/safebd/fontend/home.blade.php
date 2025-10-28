@@ -53,14 +53,17 @@
                 @foreach ([['id' => 1, 'group' => 'A+', 'count' => $members->where('blood', 1)->count() ?? 0], ['id' => 2, 'group' => 'A-', 'count' => $members->where('blood', 2)->count() ?? 0], ['id' => 3, 'group' => 'AB+', 'count' => $members->where('blood', 3)->count() ?? 0], ['id' => 4, 'group' => 'AB-', 'count' => $members->where('blood', 4)->count() ?? 0], ['id' => 5, 'group' => 'B+', 'count' => $members->where('blood', 5)->count() ?? 0], ['id' => 6, 'group' => 'B-', 'count' => $members->where('blood', 6)->count() ?? 0], ['id' => 7, 'group' => 'O+', 'count' => $members->where('blood', 7)->count() ?? 0], ['id' => 8, 'group' => 'O-', 'count' => $members->where('blood', 8)->count() ?? 0]] as $blood)
                     <a href="{{ url('/SearchBlood?blood=' . $blood['id']) }}" class="blood-card-link">
                         <div class="blood-card">
-                            <i class="fas fa-tint blood-drop"></i>
-                            <div class="blood-group">{{ $blood['group'] }}</div>
+                            <!-- Use image for blood group -->
+                            <img src="{{ asset('bloodicons/' . urlencode(strtolower($blood['group'])) . '.png') }}"
+                                alt="{{ $blood['group'] }}" class="blood-drop" />
+
                             <div class="blood-count">{{ $blood['count'] }}</div>
                             <div class="count-label">দাতা উপলব্ধ</div>
                         </div>
                     </a>
                 @endforeach
             </div>
+
 
             <!-- Search Section -->
             <div class="search-section">
