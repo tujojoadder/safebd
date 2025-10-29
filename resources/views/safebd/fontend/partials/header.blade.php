@@ -48,9 +48,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         {{-- Mobile Logo --}}
-        <div class="mobile-logo d-lg-none bg-light p-1 px-2">
-            <a href="{{ url('/') }}">
-                <img src="{{ asset($settings['site_logo']) }}" style="max-height: 40px; width: auto; cursor: pointer;" alt="Safe Bangladesh Foundation">
+        <div class="mobile-logo d-lg-none text-center py-1">
+            <a href="{{ url('/') }}" class="text-decoration-none">
+                <div class="text-white fw-bold" style="font-size: 18px; line-height: 1.2;">
+                    সেফ বাংলাদেশ ফাউন্ডেশন
+                </div>
+                <div class="text-white" style="font-size: 12px;">
+                    মানবতার সেবায় নিয়োজিত একটি স্বেচ্ছাসেবী প্রতিষ্ঠান
+                </div>
             </a>
         </div>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -61,7 +66,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('register') ? 'active' : '' }}" href="{{ route('safeBd.create') }}">
+                    <a class="nav-link {{ Request::is('register') ? 'active' : '' }}"
+                        href="{{ route('safeBd.create') }}">
                         <i class="fas fa-users"></i> সদস্য নিবন্ধন
                     </a>
                 </li>
