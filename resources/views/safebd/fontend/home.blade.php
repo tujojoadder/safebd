@@ -197,7 +197,7 @@
                             </button>
                         </div>
                     </div>
-                </div>a
+                </div>
 
                 <!-- Leader 2 -->
                 <div class="col-lg-3 col-md-6">
