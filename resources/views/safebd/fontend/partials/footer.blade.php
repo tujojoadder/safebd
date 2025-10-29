@@ -56,9 +56,11 @@
             <div class="col-lg-4 mb-4">
                 <h4 class="footer-title">যোগাযোগ</h4>
                 <ul class="footer-links">
-                    <li>
-                        <i class="fas fa-map-marker-alt me-2"></i>ভৈরব বাজার, কিশোরগঞ্জ
-                    </li>
+                    @if (!empty($settings['business_address']))
+                        <li>
+                            <i class="fas fa-map-marker-alt me-2"></i>{{ $settings['business_address'] }}
+                        </li>
+                    @endif
                     <li>
                         <i class="fas fa-map-marker-alt me-2"></i>ঢাকা বিভাগ, বাংলাদেশ
                     </li>
