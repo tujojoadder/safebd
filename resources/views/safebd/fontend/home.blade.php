@@ -70,7 +70,6 @@
                                 alt="{{ $blood['group'] }}" class="blood-drop" />
 
                             <div class="blood-count">{{ $blood['count'] }}</div>
-                            <div class="count-label">দাতা উপলব্ধ</div>
                         </div>
                     </a>
                 @endforeach

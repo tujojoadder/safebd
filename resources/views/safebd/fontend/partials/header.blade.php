@@ -31,9 +31,9 @@
                     <div class="reg-badge">
                         <i class="fas fa-certificate"></i> এস-১২১২৯/২০১৫
                     </div>
-                    <button class="btn-register">
-                        <i class="fas fa-user-plus"></i> সদস্য নিবন্ধন
-                    </button>
+                    <a href="{{ route('safeBd.create') }}" class="btn-register text-decoration-none">
+    <i class="fas fa-user-plus"></i> সদস্য নিবন্ধন
+</a>
                 </div>
             </div>
         </div>
