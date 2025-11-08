@@ -200,4 +200,14 @@
 
 @push('scripts')
     <script src="{{ asset('js/home.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#dateOfBirth").datepicker({
+                dateFormat: "yy-mm-dd", 
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-100:+0",
+            });
+        });
+    </script>
 @endpush
