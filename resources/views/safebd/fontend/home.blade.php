@@ -8,43 +8,8 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-wrapper">
-                <div class="hero-content">
-                    <h1 class="hero-title">রক্তদান জীবনদান</h1>
-                    <p class="hero-subtitle">
-                        মানবতার সেবায় নিবেদিত - একটি রক্তদান একটি জীবন বাঁচায়
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-light btn-lg px-5 py-3 rounded-pill">
-                            <i class="fas fa-tint me-2"></i>রক্ত খুঁজুন
-                        </button>
-                        <button class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">
-                            <i class="fas fa-hand-holding-heart me-2"></i>রক্তদাতা হন
-                        </button>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">রক্তদাতা</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1200+</span>
-                            <span class="stat-label">জীবন বাঁচানো হয়েছে</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">8</span>
-                            <span class="stat-label">রক্তের গ্রুপ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="{{ asset('frontend/safebd/normal/head.jpg') }}" alt="Blood Donation" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </section>
+<x-safebd.hero-section />
+
     <!-- Blood Bank Section -->
     <section class="blood-section">
         <div class="container">
