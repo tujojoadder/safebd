@@ -40,19 +40,11 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="{{ asset('frontend/safebd/normal/head.jpg') }}" alt="Blood Donation"
-                        class="img-fluid">
+                    <img src="{{ asset('frontend/safebd/normal/head.jpg') }}" alt="Blood Donation" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
     <!-- Blood Bank Section -->
     <section class="blood-section">
         <div class="container">
@@ -102,7 +94,8 @@
                             <select name="division_id" id="division_id" class="form-select">
                                 <option value="">বিভাগ নির্বাচন করুন</option>
                                 @foreach ($divisions as $division)
-                                    <option value="{{ $division->id }}">{{ $division->name_bn }}</option>
+                                    <option value="{{ $division->id }}">{{ $division->name_en }} {{ $division->bn_name }}
+                                    </option>
                                 @endforeach
                             </select>
                         </div>
@@ -184,9 +177,9 @@
                 <!-- Leader 1 -->
                 <div class="col-lg-3 col-md-6">
                     <div class="info-card text-center">
-                        <img src="{{ asset('frontend/safebd/leaders/chirmen.jpg') }}"
-                            class="card-img-top mx-auto mt-3" alt="Leader"
-                             style="width: 120px;  object-fit: cover; border-radius: 25px; border: 5px solid var(--primary-green); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
+                        <img src="{{ asset('frontend/safebd/leaders/chirmen.jpg') }}" class="card-img-top mx-auto mt-3"
+                            alt="Leader"
+                            style="width: 120px;  object-fit: cover; border-radius: 25px; border: 5px solid var(--primary-green); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
                         <div class="card-body mt-3">
                             <h5 class="card-title fw-bold mb-1">অ্যাড: মাসুদ করিম</h5>
                             <p class="text-primary mb-1">চেয়ারম্যান</p>
@@ -201,10 +194,10 @@
                 <!-- Leader 2 -->
                 <div class="col-lg-3 col-md-6">
                     <div class="info-card text-center">
-                            <img src="{{ asset('frontend/safebd/leaders/1984.jpg') }}"
-                                class=" card-img-top   mx-auto mt-3" alt="Leader"
-                                style="width: 120px; object-fit: cover; border-radius: 25px; border: 5px solid var(--primary-green); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
-                       
+                        <img src="{{ asset('frontend/safebd/leaders/1984.jpg') }}" class=" card-img-top   mx-auto mt-3"
+                            alt="Leader"
+                            style="width: 120px; object-fit: cover; border-radius: 25px; border: 5px solid var(--primary-green); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
+
                         <div class="card-body mt-3">
                             <h5 class="card-title fw-bold mb-1">মো : ফিরোজ হোসেন</h5>
                             <h6> (সফ্টওয়্যার ইঞ্জিনিয়ার)</h6>

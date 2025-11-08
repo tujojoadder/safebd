@@ -61,15 +61,13 @@
                             <i class="fas fa-map-marker-alt me-2"></i>{{ $settings['business_address'] }}
                         </li>
                     @endif
-                    <li>
-                        <i class="fas fa-map-marker-alt me-2"></i>ঢাকা বিভাগ, বাংলাদেশ
-                    </li>
-                    <li>
+                    
+                   {{--  <li>
                         <i class="fas fa-phone me-2"></i>+৮৮০ ১৭XX XXX XXX
                     </li>
                     <li>
                         <i class="fas fa-envelope me-2"></i>info@safebdf.org
-                    </li>
+                    </li> --}}
                     <li>
                         <i class="fas fa-certificate me-2"></i>রেজি নং: এস-১২১২৯/২০১৫
                     </li>

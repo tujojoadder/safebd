@@ -1,6 +1,6 @@
 @extends('safebd.fontend.layouts.app')
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endpush
 @section('content')
 
@@ -19,8 +19,9 @@
                 <!-- Header -->
                 <div class="register-header">
                     <div class="icon-circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="8.5" cy="7" r="4"></circle>
                             <polyline points="17 11 19 13 23 9"></polyline>
@@ -129,7 +130,7 @@
                                 @foreach ($divisions as $division)
                                     <option value="{{ $division->id }}"
                                         {{ old('division_id') == $division->id ? 'selected' : '' }}>
-                                        {{ $division->name_bn }}
+                                        {{ $division->name_en }} {{ $division->bn_name }}
                                     </option>
                                 @endforeach
                             </select>
@@ -198,5 +199,5 @@
 @endsection
 
 @push('scripts')
- <script src="{{ asset('js/register.js') }}"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
 @endpush
