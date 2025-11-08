@@ -389,7 +389,7 @@
     background: white;
     border-radius: 30px;
     padding: 50px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 60px rgba(180, 22, 22, 0.08);
     position: relative;
     overflow: hidden;
 }
