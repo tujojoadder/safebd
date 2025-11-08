@@ -607,11 +607,18 @@
         font-size: 2rem;
     }
 
-    .blood-grid {
-        grid-template-columns: repeat(2, 1fr);
+       .blood-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
+
 
     .search-section {
         padding: 30px 20px;
+    }
+}
+/* For extra small devices (mobile phones) */
+@media (max-width: 576px) {
+    .blood-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
