@@ -10,7 +10,7 @@
             <div class="hero-wrapper">
 
                 <!-- Search Section -->
-                <div class="search-section p-5">
+                <div class="search-section p-5 shadow-lg">
                     <h3 class="search-title">
                         <i class="fas fa-tint" style="color: #ba0f0f;"></i> রক্তের সন্ধান করুন
                     </h3>

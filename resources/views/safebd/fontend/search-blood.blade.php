@@ -37,12 +37,12 @@
                                     <tr>
                                         <td class="fw-bold text-primary text-center">{{ $index + 1 }}</td>
                                         <td class="fw-bold">{{ $member->fullname }}</td>
-                                        <td class="text-center"><span class="badge bg-danger rounded-pill">{{ $bloodGroup }}</span></td>
+                                        <td class="text-center"><span
+                                                class="badge bg-danger rounded-pill">{{ $bloodGroup }}</span></td>
                                         <td>{{ $member->phone ?? '' }}</td>
-                                        <td>{{ $member->division->name_bn ?? '' }}</td>
-                                        <td>{{ $member->district->name_bn ?? '' }}</td>
-                                        <td>{{ $member->upazila->name_bn ?? '' }}</td>
-
+                                        <td>{{ $member->division->bn_name ?? '' }}</td>
+                                        <td>{{ $member->district->bn_name ?? '' }}</td>
+                                        <td>{{ $member->upazila->bn_name ?? '' }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -68,13 +68,14 @@
                                 @foreach ($members as $index => $member)
                                     <tr>
                                         <td class="fw-bold text-center text-primary ক্রমিক">{{ $index + 1 }}</td>
-                                        <td class="fw-bold">{{ $member->fullname }}</td>
-                                        <td class="text-center"><span class="blood-type-badge ">{{ $bloodGroup }}</span></td>
+                                        <td class="fw-bold">{{ $member->fullname ?? '' }}</td>
+                                        <td class="text-center"><span class="blood-type-badge ">{{ $bloodGroup }}</span>
+                                        </td>
                                         <td>{{ $member->phone ?? '' }}</td>
+                                        <td>{{ $member->division->bn_name ?? '' }}</td>
+                                        <td>{{ $member->district->bn_name ?? '' }}</td>
+                                        <td>{{ $member->upazila->bn_name ?? '' }}</td>
 
-                                        <td>{{ $member->division->name_bn ?? $member->division }}</td>
-                                        <td>{{ $member->district->name_bn ?? $member->district }}</td>
-                                        <td>{{ $member->upazila->name_bn ?? $member->upazila }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

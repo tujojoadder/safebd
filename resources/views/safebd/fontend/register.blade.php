@@ -65,7 +65,7 @@
                                 </svg>
                                 মোবাইল নম্বর
                             </label>
-                            <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX"
+                            <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" pattern="[0-9]{11}" 
                                 value="{{ old('phone') }}" required>
                             @error('phone')
                                 <span class="error-text">{{ $message }}</span>

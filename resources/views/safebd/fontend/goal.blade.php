@@ -10,7 +10,7 @@
             <div class="col-lg-10 col-xl-9">
                 
                 <!-- Mission Statement Card -->
-                <div class="card border-0 shadow-lg mb-5">
+                <div class="card border-0 shadow mb-5">
                     <div class="card-body p-4 p-lg-5">
                         
                         <!-- Icon Header -->
