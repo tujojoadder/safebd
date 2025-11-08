@@ -1,3 +1,57 @@
+/* image slider */
+document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.slider-image');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        const slideInterval = 3000; // 3 seconds
+
+        function showSlide(index) {
+            // Remove active class from all
+            images.forEach(img => img.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Add active class to current
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % images.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto slide
+        let autoSlide = setInterval(nextSlide, slideInterval);
+
+        // Dot click handlers
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+
+                // Reset auto slide
+                clearInterval(autoSlide);
+                autoSlide = setInterval(nextSlide, slideInterval);
+            });
+        });
+
+        // Pause on hover
+        const slider = document.querySelector('.image-slider');
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(nextSlide, slideInterval);
+        });
+    });
+
+
+
+
+
+
+
 // Scroll animations
 const observerOptions = {
     threshold: 0.1,
@@ -99,3 +153,10 @@ $(function () {
         }
     });
 });
+
+
+
+
+
+
+

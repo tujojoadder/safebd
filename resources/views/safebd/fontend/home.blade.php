@@ -8,7 +8,95 @@
 
 @section('content')
     <!-- Hero Section -->
-<x-safebd.hero-section />
+    <!-- Blade Component -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-wrapper">
+
+                <!-- Search Section -->
+                <div class="search-section p-5">
+                    <h3 class="search-title">
+                        <i class="fas fa-tint" style="color: #ba0f0f;"></i> রক্তের সন্ধান করুন
+                    </h3>
+                    <form action="{{ route('blood.filter.results') }}" method="GET">
+                        <div class="row g-4">
+                            <!-- First Row: Blood Group and Division -->
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <label class="form-label">রক্তের গ্রুপ</label>
+                                <select name="blood" id="blood" class="form-select" required>
+                                    <option value="">নির্বাচন করুন</option>
+                                    <option value="1">A+</option>
+                                    <option value="2">A-</option>
+                                    <option value="3">AB+</option>
+                                    <option value="4">AB-</option>
+                                    <option value="5">B+</option>
+                                    <option value="6">B-</option>
+                                    <option value="7">O+</option>
+                                    <option value="8">O-</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <label class="form-label">বিভাগ</label>
+                                <select name="division_id" id="division_id" class="form-select">
+                                    <option value="">বিভাগ নির্বাচন করুন</option>
+                                    @foreach ($divisions as $division)
+                                        <option value="{{ $division->id }}">{{ $division->name_en }}
+                                            {{ $division->bn_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <!-- Second Row: District and Upazila -->
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <label class="form-label">জেলা</label>
+                                <select name="district_id" id="district_id" class="form-select">
+                                    <option value="">প্রথমে বিভাগ নির্বাচন করুন</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <label class="form-label">থানা/উপজেলা</label>
+                                <select name="upazila_id" id="upazila_id" class="form-select">
+                                    <option value="">প্রথমে জেলা নির্বাচন করুন</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn-search">
+                                    <i class="fas fa-search me-2"></i>অনুসন্ধান করুন
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-slider">
+                        <div class="slider-track">
+                            <img src="{{ asset('frontend/safebd/normal/5.jpg') }}" alt="Blood Donation 1"
+                                class="slider-image active">
+                            <img src="{{ asset('frontend/safebd/normal/48.jpg') }}" alt="Blood Donation 2"
+                                class="slider-image">
+                            <img src="{{ asset('frontend/safebd/normal/16.jpg') }}" alt="Blood Donation 3"
+                                class="slider-image">
+
+                            <img src="{{ asset('frontend/safebd/normal/4.jpg') }}" alt="Blood Donation 4"
+                                class="slider-image">
+                            <img src="{{ asset('frontend/safebd/normal/23.jpg') }}" alt="Blood Donation 5"
+                                class="slider-image">
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                            <span class="dot" data-slide="3"></span>
+                            <span class="dot" data-slide="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Blood Bank Section -->
     <section class="blood-section">
@@ -30,59 +118,6 @@
                         </div>
                     </a>
                 @endforeach
-            </div>
-
-
-            <!-- Search Section -->
-            <div class="search-section">
-                <h3 class="search-title">
-                    <i class="fas fa-search"></i>রক্তের সন্ধান করুন
-                </h3>
-                <form action="{{ route('blood.filter.results') }}" method="GET">
-                    <div class="row g-4">
-                        <div class="col-md-3">
-                            <label class="form-label">রক্তের গ্রুপ</label>
-                            <select name="blood" id="blood" class="form-select" required>
-                                <option value="">নির্বাচন করুন</option>
-                                <option value="1">A+</option>
-                                <option value="2">A-</option>
-                                <option value="3">AB+</option>
-                                <option value="4">AB-</option>
-                                <option value="5">B+</option>
-                                <option value="6">B-</option>
-                                <option value="7">O+</option>
-                                <option value="8">O-</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">বিভাগ</label>
-                            <select name="division_id" id="division_id" class="form-select">
-                                <option value="">বিভাগ নির্বাচন করুন</option>
-                                @foreach ($divisions as $division)
-                                    <option value="{{ $division->id }}">{{ $division->name_en }} {{ $division->bn_name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">জেলা</label>
-                            <select name="district_id" id="district_id" class="form-select">
-                                <option value="">প্রথমে বিভাগ নির্বাচন করুন</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">থানা/উপজেলা</label>
-                            <select name="upazila_id" id="upazila_id" class="form-select">
-                                <option value="">প্রথমে জেলা নির্বাচন করুন</option>
-                            </select>
-                        </div>
-                        <div class="col-12 text-center mt-4">
-                            <button type="submit" class="btn-search">
-                                <i class="fas fa-search me-2"></i>অনুসন্ধান করুন
-                            </button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
