@@ -1,4 +1,13 @@
 <!-- Top Header -->
+<style>
+   @media (min-width: 992px) and (max-width: 1400px) {
+    .navbar-nav .nav-link i {
+        display: none;
+    }
+}
+
+
+</style>
 <header class="top-header d-none d-lg-block">
     <div class="container">
         <div class="row align-items-center">
@@ -66,36 +75,56 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('register') ? 'active' : '' }}"
+                    <a class="nav-link {{ Request::is('safeBd.create') ? 'active' : '' }}"
                         href="{{ route('safeBd.create') }}">
                         <i class="fas fa-users"></i> সদস্য নিবন্ধন
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('objectives') ? 'active' : '' }}" href="#">
+                    <a class="nav-link {{ Request::is('safebd.ourGoal') ? 'active' : '' }}"
+                        href="{{ route('safebd.ourGoal') }}">
                         <i class="fas fa-bullseye"></i> উদ্দেশ্য ও লক্ষ্য
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('blood-donation') ? 'active' : '' }}" href="#">
-                        <i class="fas fa-tint"></i> রক্তদান
+                    <a class="nav-link {{ Request::is('safebd.documents') ? 'active' : '' }}"
+                        href="{{ route('safebd.documents') }}">
+                        <i class="fas fa-file-alt"></i> প্রযোজনীয় কাগজ
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('donation') ? 'active' : '' }}" href="#">
+                    <a class="nav-link {{ Request::is('safebd.donate') ? 'active' : '' }}"
+                        href="{{ route('safebd.donate') }}">
                         <i class="fas fa-donate"></i> দান-অনুদান
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('gallery') ? 'active' : '' }}" href="#">
+                    <a class="nav-link {{ Request::is('safebd.nirbahiComity') ? 'active' : '' }}"
+                        href="{{ route('safebd.nirbahiComity') }}">
+                        <i class="fas fa-users"></i> নির্বাহী কমীটি
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('safebd.photos') ? 'active' : '' }}"
+                        href="{{ route('safebd.photos') }}">
                         <i class="fas fa-images"></i> ছবি
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="#">
+                    <a class="nav-link {{ Request::is('safebd.others') ? 'active' : '' }}"
+                        href="{{ route('safebd.others') }}">
+                        <i class="fas fa-th"></i> বিবিধ
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}"
+                        href="{{ route('safebd.contact') }}">
                         <i class="fas fa-phone"></i> যোগাযোগ
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>

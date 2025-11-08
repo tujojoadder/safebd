@@ -10,7 +10,7 @@ use App\Models\Setting;
 use App\Models\Upazila;
 use Illuminate\Http\Request;
 
-class SelfBDUserController extends Controller
+class SafeBDUserController extends Controller
 {
 
     public function create()
@@ -140,5 +140,43 @@ class SelfBDUserController extends Controller
         $bloodGroup = $bloodGroups[$bloodId] ?? 'সকল';
 
         return view('safebd.fontend.filter-results', compact('members', 'bloodGroup', 'settings'));
+    }
+
+    public function ourGoal()
+    {
+        $settings = Setting::pluck('value', 'name');
+        return view('safebd.fontend.goal', compact('settings'));
+    }
+
+    public function documents()
+    {
+        $settings = Setting::pluck('value', 'name');
+        return view('safebd.fontend.documents', compact('settings'));
+    }
+
+    public function donate()
+    {
+        $settings = Setting::pluck('value', 'name');
+        return view('safebd.fontend.donate', compact('settings'));
+    }
+    public function nirbahiComity()
+    {
+        $settings = Setting::pluck('value', 'name');
+        return view('safebd.fontend.nirbahi-comity', compact('settings'));
+    }
+    public function others()
+    {
+        $settings = Setting::pluck('value', 'name');
+        return view('safebd.fontend.others', compact('settings'));
+    }
+    public function contact()
+    {
+        $settings = Setting::pluck('value', 'name');
+        return view('safebd.fontend.contact', compact('settings'));
+    }
+    public function photos()
+    {
+        $settings = Setting::pluck('value', 'name');
+        return view('safebd.fontend.photos', compact('settings'));
     }
 }

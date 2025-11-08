@@ -2,10 +2,6 @@
 
 @section('title', 'হোম - সেফ বাংলাদেশ ফাউন্ডেশন')
 
-@push('styles')
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-@endpush
-
 @section('content')
     <!-- Hero Section -->
     <!-- Blade Component -->
@@ -82,7 +78,7 @@
 
                             <img src="{{ asset('frontend/safebd/normal/4.jpg') }}" alt="Blood Donation 4"
                                 class="slider-image">
-                            <img src="{{ asset('frontend/safebd/normal/23.jpg') }}" alt="Blood Donation 5"
+                            <img src="{{ asset('frontend/safebd/normal/7.jpg') }}" alt="Blood Donation 5"
                                 class="slider-image">
                         </div>
                         <div class="slider-dots">
@@ -281,6 +277,3 @@
     </section>
 @endsection
 
-@push('scripts')
-    <script src="{{ asset('js/home.js') }}"></script>
-@endpush

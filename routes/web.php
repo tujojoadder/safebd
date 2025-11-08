@@ -38,7 +38,7 @@ use App\Http\Controllers\backend\CountryDataController;
 use App\Http\Controllers\backend\RoleController;
 use App\Http\Controllers\backend\StaffController;
 use App\Http\Controllers\backend\PosController;
-use App\Http\Controllers\SafeBD\SelfBDUserController;
+use App\Http\Controllers\SafeBD\SafeBDUserController;
 
 
 /*
@@ -57,13 +57,22 @@ use App\Http\Controllers\SafeBD\SelfBDUserController;
 
 Route::get('/', [FrontendController::class, 'safeBD'])->name('safeBd');
 
-Route::get('/register', [SelfBDUserController::class, 'create'])->name('safeBd.create');
-Route::post('/safebd/register', [SelfBDUserController::class, 'store'])->name('safeBd.store');
-Route::get('/safebd/get-districts/{divisionId}', [SelfBDUserController::class, 'getDistricts'])->name('safeBd.getDistricts');
-Route::get('/safebd/get-upazilas/{districtId}', [SelfBDUserController::class, 'getUpazilas'])->name('safeBd.getUpazilas');
+Route::get('/register', [SafeBDUserController::class, 'create'])->name('safeBd.create');
+Route::post('/safebd/register', [SafeBDUserController::class, 'store'])->name('safeBd.store');
+Route::get('/safebd/get-districts/{divisionId}', [SafeBDUserController::class, 'getDistricts'])->name('safeBd.getDistricts');
+Route::get('/safebd/get-upazilas/{districtId}', [SafeBDUserController::class, 'getUpazilas'])->name('safeBd.getUpazilas');
 
-Route::get('/SearchBlood', [SelfBDUserController::class, 'searchBlood'])->name('search.blood');
-Route::get('/filterblood', [SelfBDUserController::class, 'filterBlood'])->name('blood.filter.results');
+Route::get('/SearchBlood', [SafeBDUserController::class, 'searchBlood'])->name('search.blood');
+Route::get('/filterblood', [SafeBDUserController::class, 'filterBlood'])->name('blood.filter.results');
+
+Route::get('/ourgoal', [SafeBDUserController::class, 'ourGoal'])->name('safebd.ourGoal');
+Route::get('/documents', [SafeBDUserController::class, 'documents'])->name('safebd.documents');
+Route::get('/donate', [SafeBDUserController::class, 'donate'])->name('safebd.donate');
+Route::get('/nirbahiComity', [SafeBDUserController::class, 'nirbahiComity'])->name('safebd.nirbahiComity');
+Route::get('/others', [SafeBDUserController::class, 'others'])->name('safebd.others');
+Route::get('/contact', [SafeBDUserController::class, 'contact'])->name('safebd.contact');
+Route::get('/photos', [SafeBDUserController::class, 'photos'])->name('safebd.photos');
+
 
 
 /*================== Start Frontend All Route ==============*/
