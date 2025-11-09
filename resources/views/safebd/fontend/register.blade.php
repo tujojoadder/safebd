@@ -65,8 +65,8 @@
                                 </svg>
                                 মোবাইল নম্বর
                             </label>
-                            <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" pattern="[0-9]{11}" 
-                                value="{{ old('phone') }}" required>
+                            <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX"
+                                pattern="[0-9]{11}" value="{{ old('phone') }}" required>
                             @error('phone')
                                 <span class="error-text">{{ $message }}</span>
                             @enderror
@@ -203,7 +203,7 @@
     <script>
         $(document).ready(function() {
             $("#dateOfBirth").datepicker({
-                dateFormat: "yy-mm-dd", 
+                dateFormat: "yy-mm-dd",
                 changeMonth: true,
                 changeYear: true,
                 yearRange: "-100:+0",

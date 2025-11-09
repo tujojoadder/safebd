@@ -17,7 +17,7 @@
                     <form action="{{ route('blood.filter.results') }}" method="GET">
                         <div class="row g-4">
                             <!-- First Row: Blood Group and Division -->
-                            <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-6">
                                 <label class="form-label">রক্তের গ্রুপ</label>
                                 <select name="blood" id="blood" class="form-select" required>
                                     <option value="">নির্বাচন করুন</option>
@@ -31,10 +31,10 @@
                                     <option value="8">O-</option>
                                 </select>
                             </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-                                <label class="form-label">বিভাগ</label>
+                            <div class="col-6">
+                                <label class="form-label">বিভাগ নির্বাচন</label>
                                 <select name="division_id" id="division_id" class="form-select">
-                                    <option value="">বিভাগ নির্বাচন করুন</option>
+                                    <option value="">বিভাগ</option>
                                     @foreach ($divisions as $division)
                                         <option value="{{ $division->id }}">{{ $division->name_en }}
                                             {{ $division->bn_name }}
@@ -44,16 +44,16 @@
                             </div>
 
                             <!-- Second Row: District and Upazila -->
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-                                <label class="form-label">জেলা</label>
+                            <div class="col-6">
+                                <label class="form-label">জেলা নির্বাচন</label>
                                 <select name="district_id" id="district_id" class="form-select">
-                                    <option value="">প্রথমে বিভাগ নির্বাচন করুন</option>
+                                    <option value="">জেলা</option>
                                 </select>
                             </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-6">
                                 <label class="form-label">থানা/উপজেলা</label>
                                 <select name="upazila_id" id="upazila_id" class="form-select">
-                                    <option value="">প্রথমে জেলা নির্বাচন করুন</option>
+                                    <option value="">থানা/উপজেলা</option>
                                 </select>
                             </div>
 
